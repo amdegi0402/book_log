@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:book_meter/presentation/add_acount/add_acount_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:book_meter/auth/auth.dart';
-import 'package:book_meter/presentation/reset_pass/reset_password_page.dart';
+
 
 
 class MenuPage extends StatelessWidget{
@@ -52,7 +52,7 @@ Future inputData(context) async {
     try {
       final FirebaseUser user = await _auth.currentUser();
       final _uid =  user.uid;
-      print("login_uid =_${_uid}");
+      print("login_uid =_$_uid");
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(

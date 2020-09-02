@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthorBookModel extends ChangeNotifier{
  List<Book> books = [];
- List<Book> a_books = [];
+ List<Book> aBook = [];
  List<int> num = [];
  String name;
 int authorLength= 0;
@@ -34,8 +34,8 @@ bool showName = false;
       cnt++;
     });
     num.forEach((n) {
-        a_books.add(books[n]);
-        //print("a_book==>${a_books[0].authorName}");
+        aBook.add(books[n]);
+        //print("a_book==>${aBook[0].authorName}");
     });
     showName = true;
     notifyListeners(); 

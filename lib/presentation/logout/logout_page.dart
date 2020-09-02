@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:book_meter/presentation/logout/logout_model.dart';
-import 'package:book_meter/auth/auth.dart';
 import 'package:book_meter/presentation/main/main.dart';
 
 class LogoutPage extends StatelessWidget{

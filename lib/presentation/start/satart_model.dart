@@ -4,7 +4,6 @@ import 'package:book_meter/presentation/menu/menu_page.dart';
 import 'package:book_meter/presentation/book_list/book_list_page.dart';
 
 class StartModel extends ChangeNotifier{
-  //String user = 'ここにID';
   String userId = "ID NAME";
   bool check = false;
 

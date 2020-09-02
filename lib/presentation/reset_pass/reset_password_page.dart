@@ -1,8 +1,4 @@
-import 'package:book_meter/presentation/add_book/add_book_page.dart';
-import 'package:book_meter/presentation/book_list/book_list_models.dart';
 import 'package:flutter/material.dart';
-import 'package:book_meter/domain/book.dart';
-//import 'package:flutter/semantics.dart';
 import 'package:provider/provider.dart';
 import 'package:book_meter/presentation/reset_pass/reset_password_model.dart';
 import 'package:flushbar/flushbar.dart';
@@ -24,7 +20,6 @@ class ResetPassPage extends StatelessWidget{
        body: Consumer<ResetPassModel>(
          
          builder: (context, model, child){
-           final formGlobalKey = GlobalKey();
           return Center(
              child: Form(
                 child: SingleChildScrollView(

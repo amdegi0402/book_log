@@ -16,7 +16,6 @@ class AddBookPage extends StatelessWidget{
  bool _cnt = false;
   @override
   Widget build(BuildContext context){
-    //final bottomSpace = MediaQuery.of(context).viewInsets.bottom;
  
     final bool isUpdate = book != null;
     final titleTextEditingController = TextEditingController();
@@ -29,7 +28,7 @@ class AddBookPage extends StatelessWidget{
       memoTextEditingController.text = book.memo;
       authorTextEditingController.text = book.authorName;
     }
-    //print("nullCheck ===> ${nullCheck}");
+
     return ChangeNotifierProvider<AddBookModel>(
      create: (_) => AddBookModel(),
     child: Stack(
@@ -49,7 +48,6 @@ class AddBookPage extends StatelessWidget{
               return SingleChildScrollView(
                 child: Padding(
                 padding: const EdgeInsets.only(top:8.0, left:8.0, right:8.0),
-                //padding: EdgeInsets.only(bottom: bottomSpace),
                 child: Column(
                   children: [
                     //画像エリアをタップしたときの処理
@@ -85,7 +83,6 @@ class AddBookPage extends StatelessWidget{
                        decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'タイトル',
-                        //labelText: 'タイトル',
                     ),
                       onChanged: (text){
                         model.bookTitle = text;
@@ -129,8 +126,6 @@ class AddBookPage extends StatelessWidget{
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           hintText: 'メモ',
-                          //labelText: 'メモ',
-                          //contentPadding: const EdgeInsets.symmetric(vertical: 30.0),
                         ),
                         onChanged: (text){
                           model.bookMemo = text;
@@ -162,9 +157,7 @@ class AddBookPage extends StatelessWidget{
                 ),
 
               ),
-              );
-              
-              
+              );  
             },
           ),
         ), 
@@ -201,9 +194,7 @@ class AddBookPage extends StatelessWidget{
                 onPressed: (){
                   //Navigator.of(context).pop();
                   Navigator.of(context).pushReplacement(
-
-                      MaterialPageRoute(builder: (context) => BookListPage()),
-                    
+                    MaterialPageRoute(builder: (context) => BookListPage()),
                   );
                 },
               ),
@@ -279,5 +270,4 @@ class AddBookPage extends StatelessWidget{
       );
     }
   }
-  
 }

@@ -57,7 +57,7 @@ class AuthorListPage extends StatelessWidget{
         body: Consumer<AuthorListModel>(
           builder: (context, model, child){
             if(model.showName == false) model.nameList();
-            final books = model.a_books;
+            final books = model.aBooks;
             final listTiles = books
               .map((book) => Container(
                 padding: EdgeInsets.only(left: 10, right: 10,top: 1),

@@ -66,7 +66,7 @@ class AuthorBookPage extends StatelessWidget{
             //final String name = "川合俊輔";
             if(model.showName == false) model.authorBooks(name);
             //model.authorBooks(name);
-            final books = model.a_books;
+            final books = model.aBook;
             final listTiles = books
           
               .map((book) => Container(

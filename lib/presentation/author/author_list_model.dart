@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthorListModel extends ChangeNotifier{
  List<Book> books = [];
- List<String> a_books = [];
+ List<String> aBooks = [];
   int authorLength= 0;
   String str;
   String author ="ここに表示";
@@ -14,17 +14,14 @@ class AuthorListModel extends ChangeNotifier{
 
   //特定のフィールドデータ読み込み
   Future<String> nameList() async {
-    List<String> str = [];
     final user = await FirebaseAuth.instance.currentUser();
     final docs = await Firestore.instance.collection(user.uid.toString()).getDocuments();
     final books = docs.documents.map((doc) => Book(doc)).toList();
     this.books = books;
     authorLength = books.length;
-    int cnt = 0;
     List<String> a_book = [];
     List<String> aName = [];
-    Map<String, int> mapName = new Map<String, int>();
-    bool f_name = false;
+    bool fName = false;
     
 
   
@@ -33,14 +30,14 @@ class AuthorListModel extends ChangeNotifier{
     });
 
     books.forEach((book) {
-      for(int i =0; i < a_books.length; i++){
-        if(a_books[i] == book.authorName && f_name == false){
-          f_name = true;
-        }else if(a_book[i] == book.authorName && f_name == true){
+      for(int i =0; i < aBooks.length; i++){
+        if(aBooks[i] == book.authorName && fName == false){
+          fName = true;
+        }else if(a_book[i] == book.authorName && fName == true){
           a_book[i] = "";
         }
       }
-      f_name = false;
+      fName = false;
     });
 
     a_book.forEach((e) {
@@ -56,7 +53,7 @@ class AuthorListModel extends ChangeNotifier{
 
    
     print("a_book${a_book} books${books.length}");
-    a_books = aName;
+    aBooks = aName;
     showName = true;
     notifyListeners();
   }

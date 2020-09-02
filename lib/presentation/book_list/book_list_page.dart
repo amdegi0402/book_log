@@ -10,7 +10,7 @@ import 'package:book_meter/domain/post.dart';
 import 'package:book_meter/presentation/bottom_navi/bottom_navi_model.dart';
 import 'package:book_meter/presentation/author/author_list_page.dart';
 import 'package:book_meter/presentation/author_title/author_book_page.dart';
-import 'package:book_meter/test/fb_test_page.dart';
+
 
 class BookListPage extends StatelessWidget{
   @override

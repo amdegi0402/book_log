@@ -1,12 +1,7 @@
-//import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:book_meter/presentation/add_acount/add_acount_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:book_meter/presentation/book_list/book_list_page.dart';
-//import 'package:book_meter/auth/auth.dart';
 import 'package:flushbar/flushbar.dart';
-import 'package:flushbar/flushbar_helper.dart' ;
 import 'package:book_meter/presentation/add_book/add_book_page.dart';
 
 class AddAcountPage extends StatelessWidget{
